@@ -17,7 +17,7 @@ class Post extends Model
     }
     // the relation of category
     public function category(){
-        return $this->belongsTo(Category::class);
+        return $this->belongsTo(Category::class , 'category_id' , 'id');
     }
     // the relation of comments
     public function comments(){

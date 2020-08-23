@@ -6,6 +6,7 @@ use App\Comment;
 use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 
 class CommentsController extends Controller
 {
@@ -32,18 +33,19 @@ class CommentsController extends Controller
     // store the new comments
     public function store(Request $request)
     {
+        Carbon::setLocale('en');
 
         $comment = Comment::create([
            'post_id' => $request->post_id,
            'body' => $request->body,
-           'user_id' => 11,
+           'user_id' => $request->user_id,
         ]);
-        $user = User::find($comment->user_id)->first();
+        //$user = User::find($comment->user_id)->first();
 
         return response()->json([
            'body' => $comment->body,
            'created_at' => $comment->created_at->diffForHumans(),
-           'user' => $user->name
+           'user' => auth()->user()['name'],
         ]);
     }
 

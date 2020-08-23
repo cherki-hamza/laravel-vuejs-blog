@@ -42,15 +42,24 @@
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <router-link class="nav-link" :to="home">
-                            <img style="border-radius:100px;width:30px;height:30px;" :src="img">
+                            <router-link class="nav-link" :to="profile" v-if="login">
+                                <span style="color:aqua;font-weight: bold;font-size: 20px;">{{ name }}</span>
+                            <img style="border-radius:100px;width:30px;height:30px;" :src="picture" :alt="name">
                             </router-link>
                         </li>
                         <li class="nav-item active">
-                            <router-link class="nav-link" :to="home">Login</router-link>
+                            <router-link class="nav-link" :to="login_on" v-if="!login">Login</router-link>
                         </li>
                         <li class="nav-item active">
-                            <router-link class="nav-link" :to="home">Register</router-link>
+                            <router-link class="nav-link" :to="register_new" v-if="!login">Register</router-link>
+                        </li>
+                        <li class="nav-item active">
+                            <router-link class="nav-link" :to="dashboard" v-if="login && admin">Dashboard</router-link>
+                        </li>
+                        <li class="nav-item active">
+                            <a @click="userLogout" class="nav-link" v-if="login">
+                                <span style="cursor:pointer" class="mt-3">Logout</span>
+                            </a>
                         </li>
 
                     </ul>
@@ -61,26 +70,31 @@
 </template>
 
 <script>
+import router from "./routes/routes";
+
 export default {
 
     data(){
             return{
                 home : '/',
+                register_new : '/register_new',
+                login_on : '/login_on',
+                logout_off : '/logout_off',
                 blog : '/blog',
                 img : 'https://source.unsplash.com/random',
                 user : [],
-                categories : {},
+                categories : [],
+                   login : '',
+                   name  : '',
+                   picture : '',
+                dashboard : '/dashboard',
+                profile : '/profile',
+                admin: '',
             }
     },
     created() {
         this.getCategories();
-        axios.get('/api/users')
-            .then(response => {
-                console.log(response.data);
-                this.user = response.data;
-            }).catch(err => {
-            console.log(err);
-        });
+        this.getUsers();
     },
     methods : {
         getCategories(){
@@ -91,6 +105,27 @@ export default {
                 })
                 .catch(err => console.log(err))
         },
+        getUsers(){
+            axios.get('/api/users')
+                .then(response => {
+                    console.log(response.data);
+                    this.user = response.data;
+                    this.login = User.isLogin().logged;
+                    this.admin = User.isAdmin();
+                    this.name  = User.isLogin().name;
+                    this.picture = User.isLogin().img;
+                }).catch(err => {
+                console.log(err);
+            });
+        },
+        userLogout(){
+            User.logout();
+            this.logged = false;
+            //router.push({name:'home'})
+            this.$router.go();
+            //this.$router.push({ name: 'register_new' })
+
+        }
     }
 
 }

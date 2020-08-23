@@ -5,6 +5,7 @@
 <script src="{{asset('frontend/assets/js/jquery.js')}}"></script>
 <script src="{{asset('frontend/assets/js/bootstrap.js')}}"></script>
 <script src="{{ asset('js/app.js') }}" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 
 </body>
 </html>

@@ -8,6 +8,11 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+// get the user helper
+import User from "./helpers/User";
+// do the user to global injection
+window.User = User;
+
 
 Vue.component('app-home', require('./AppHome').default);
 Vue.component('pagination', require('laravel-vue-pagination'));

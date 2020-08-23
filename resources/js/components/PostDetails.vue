@@ -28,7 +28,7 @@
         <!-- start comments -->
         <div class="row my-3">
             <div class="col-md-12">
-                <div class="media shadow my-4 p-4">
+                <div class="media shadow my-4 p-4" v-if="logged">
                     <div class="media-body">
                         <h3 class="my-3 text-dark">Add Comment</h3>
                         <div class="form-group">
@@ -45,10 +45,16 @@
                                 type="button"
                                 class="btn btn-block btn-primary"
                                 value="Add Comment"
-                                @click="addComment(post.id)"l
+                                @click="addComment(post.id)"
                             >
 
                         </div>
+                    </div>
+                </div>
+                <div class="media shadow my-5 p-5" v-else>
+                    <div class="media-body text-danger">
+
+                       <router-link to="/login_on">Oops No Permission to add comment So Login for add Comment :)</router-link>
                     </div>
                 </div>
 
@@ -60,7 +66,7 @@
                 <!-- start show comments -->
                 <div class="media shadow my-4 p-4" v-for="(comment,index) in post.comments" :key="index">
                     <div class="media-body">
-                     <span class="text-danger"><img style="border-radius: 100%;width: 60px;height: 60px;" class="img-circle mr-3" :src="post.user_profile" :alt="post.title" ><strong>{{comment.user}}</strong> || <strong class="text-primary text-right">On :{{comment.created_at}}</strong></span>
+                     <span class="text-danger"><img style="border-radius: 100%;width: 60px;height: 60px;" class="img-circle mr-3" :src="post.user_profile" :alt="post.title" ><strong>{{name}}</strong> || <strong class="text-primary text-right">On :{{comment.created_at}}</strong></span>
                      <p class="lead">{{comment.body}}</p>
                     </div>
                 </div>
@@ -75,11 +81,15 @@
 
 <script>
 
+import router from "../routes/routes";
+
 export default {
   data(){
       return {
           post : [],
           comment : '',
+          logged : '',
+          name : '',
       }
   },
   methods: {
@@ -87,9 +97,13 @@ export default {
           axios.post('/api/comments' , {
              'post_id' : id,
               'body' : this.comment,
+              'user_id' : User.isLogin().id,
           }).then(response=> {
              this.post.comments_count +=1;
              this.post.comments.unshift(response.data);
+             this.logged = User.isLogin().logged;
+             this.name = User.isLogin().name;
+             //this.$router.go();
              this.comment = null;
           }).catch(err => {
               console.log(err);
@@ -99,8 +113,10 @@ export default {
   created() {
       axios.get(`/api/posts/${this.$route.params.slug}`)
            .then(response => {
-               console.log(response.data);
-               this.post = response.data;
+               console.log(response.data.post);
+               this.post = response.data.post;
+               this.logged = User.isLogin().logged;
+               this.name = User.isLogin().name;
            }).catch(err => {
              console.log(err);
       })

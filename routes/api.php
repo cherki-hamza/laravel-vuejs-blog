@@ -24,6 +24,10 @@ Route::apiResource('/posts' , 'frontend\SiteController');
 Route::apiResource('/categories' , 'backend\CategoryController');
 // users resource
 Route::apiResource('/users' , 'backend\UsersController');
+// frontend users register
+Route::post('/users/register_new' , 'frontend\UsersController@register');
+// frontend users login
+Route::post('/users/login_to' , 'frontend\UsersController@login');
 // get posts by category
 Route::get('/posts/category/{slug}' , 'frontend\SiteController@category');
 // comments

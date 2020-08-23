@@ -1,7 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="44fd2cf9-6da8-449a-b5e5-019566939d1a" name="Default Changelist" comment="" />
+    <list default="true" id="44fd2cf9-6da8-449a-b5e5-019566939d1a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/backend/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/backend/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/frontend/CommentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/frontend/CommentsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/frontend/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/frontend/SiteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Login.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Logout.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/PostDetails.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/PostDetails.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Register.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/menu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/menu.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/routes/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/routes/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/layout/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/layout/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +50,9 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -126,9 +169,10 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../laravel-ajax" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -162,22 +206,48 @@
       <workItem from="1597414719918" duration="20426000" />
       <workItem from="1597604506696" duration="3254000" />
       <workItem from="1597667897677" duration="44683000" />
-      <workItem from="1597756179764" duration="1445000" />
+      <workItem from="1597756179764" duration="32898000" />
+      <workItem from="1597841687330" duration="5987000" />
+      <workItem from="1597929495763" duration="17711000" />
+      <workItem from="1598018862284" duration="14957000" />
+      <workItem from="1598106950504" duration="16263000" />
+      <workItem from="1598197520386" duration="273000" />
+      <workItem from="1598197811034" duration="34000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="555" y="189" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597334703537">
       <screen x="0" y="27" width="1920" height="1004" />
     </state>
     <state x="555" y="189" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1004@0.27.1920.1004" timestamp="1597334703537" />
-    <state x="693" y="286" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597342395356">
+    <state x="651" y="320" width="622" height="416" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598021968551">
       <screen x="0" y="27" width="1920" height="1004" />
     </state>
-    <state x="693" y="286" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1920.1004@0.27.1920.1004" timestamp="1597342395356" />
+    <state x="651" y="320" width="622" height="416" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1920.1004@0.27.1920.1004" timestamp="1598021968551" />
+    <state x="693" y="286" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598021225836">
+      <screen x="0" y="27" width="1920" height="1004" />
+    </state>
+    <state x="693" y="286" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1920.1004@0.27.1920.1004" timestamp="1598021225836" />
+    <state x="743" y="286" width="424" height="484" key="FileChooserDialogImpl" timestamp="1598197791318">
+      <screen x="0" y="27" width="1920" height="1004" />
+    </state>
+    <state x="743" y="286" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.1004@0.27.1920.1004" timestamp="1598197791318" />
     <state width="1874" height="253" key="GridCell.Tab.0.bottom" timestamp="1597325857192">
       <screen x="0" y="27" width="1920" height="1004" />
     </state>
@@ -198,5 +268,9 @@
       <screen x="0" y="27" width="1920" height="1004" />
     </state>
     <state x="449" y="163" key="SettingsEditor/0.27.1920.1004@0.27.1920.1004" timestamp="1597682603609" />
+    <state x="623" y="245" width="672" height="678" key="search.everywhere.popup" timestamp="1598032705842">
+      <screen x="0" y="27" width="1920" height="1004" />
+    </state>
+    <state x="623" y="245" width="672" height="678" key="search.everywhere.popup/0.27.1920.1004@0.27.1920.1004" timestamp="1598032705842" />
   </component>
 </project>
